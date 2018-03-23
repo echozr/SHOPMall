@@ -1,0 +1,33 @@
+{
+  "name": "mall",
+  "version": "1.0.0",
+  "description": "mmal前端代码",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "devw": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8098",
+    "distw": "set WEBPACK_ENV=online && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echozr/SHOPMall.git"
+  },
+  "author": "zhengrui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/echozr/SHOPMall/issues"
+  },
+  "homepage": "https://github.com/echozr/SHOPMall#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
