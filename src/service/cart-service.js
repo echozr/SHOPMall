@@ -26,7 +26,66 @@ var _cart={
 			success:resolve,
 			error:reject	
 		})	
+	},
+	//购物车选中某个商品
+	selectProduct:function(productId,resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/select.do'),
+			data:{
+				productId:productId
+			},
+			success:resolve,
+			error:reject	
+		})		
+	},
+	//购物车取消选中某个商品
+	unselectProduct:function(productId,resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/un_select.do'),
+			data:{
+				productId:productId
+			},
+			success:resolve,
+			error:reject	
+		})		
+	},
+	//购物车全选
+	selectAll:function(resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/select_all.do'),
+			success:resolve,
+			error:reject	
+		})		
+	},
+	//购物车取消全选
+	unselectAll:function(resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/un_select_all.do'),
+			success:resolve,
+			error:reject	
+		})		
+	},
+	//更新购物车某个产品数量
+	updateProduct:function(productInfo,resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/update.do'),
+			data:productInfo,
+			success:resolve,
+			error:reject	
+		})		
+	},
+	//移除购物车某个产品
+	delateProduct:function(productIds,resolve,reject){
+		_mm.requese({
+			url:_mm.getServerUrl('/cart/delete_product.do'),
+			data:{
+				productIds:productIds
+			},
+			success:resolve,
+			error:reject	
+		})		
 	}
+	
 }
 
 module.exports=_cart;
