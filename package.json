@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "devw": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8098",
-    "distw": "set WEBPACK_ENV=online && webpack -p"
+    "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
