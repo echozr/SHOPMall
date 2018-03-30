@@ -124,7 +124,7 @@ var page = {
 		$(document).on("click",".btn-submit", function(){
 			//当购物车有商品 总价大于0  才能 结算
 			if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice>0){
-				Window.location.href="./order-confirm.html"	
+				window.location.href="./order-confirm.html"	
 			}else{
 				_mm.errorTips("请选择商品后再结算")
 			}
